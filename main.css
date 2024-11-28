@@ -1,0 +1,52 @@
+// elementy strony (atrybuty są węzłami), które mogą być:
+//pobierane
+//modyfikowane
+//usuwane
+//tworzone
+//nasłuchujemy
+//struktura dom przypomina drzewo na szczycie którego jest obiket document
+//dom nie jest częścią struktury js ale js umozliwia pracę z dom, js jest interfejsem na pracę z stroną internetową 
+//aby w pryszłości zmodyfikować kod najpierwe należy go pobrać, mam dużó metod i właściwości które umożliwiają mim kodyfikację mi tego co na stronie internetowej
+//możemy nasłuchiwqać na jakieś zdarzenie, czyli jak wystąpi zdarzenie to zaprogrsamoiwujemy jakąś akcję np: na kliknięcie
+//tworzenie i dodawanie elementów
+//na początku muszę coś stworzyć aby to potem zmodyfikować
+
+//1. pobieranie właściwości obiektu elementu
+//przykładowe właściwości
+//document - cała strona internetowa
+//document.documentElement - odnosi się do pierwszego znacznika
+//document.body
+//document.body.h1 - to nie zadzaiła bo ten element musimy sobie wyszukać
+//document.images - zbiera wszystkie obrazki
+//HTMLCollection - przypomina tablicę jest to obiekt tablicopodobny ma length (długość), dop jego elementu można się dostać za pomocą notacji tablicy
+//problemem jest ze mam mniej metod niż ta tablica
+
+//2. dwie metody zrobienia tasblicy z pobranych elementów które są obiektem tablicopodobnym
+
+//ten elkement jest obiektem tablicopodobnym i zamieniam go poniżej na tablicę
+//na obiekcie wykonuje metodę from() która informuje zrób tablicę z tgego co jest w nawiasach
+const imgs = Array.from(document.images)
+
+//...operator const
+//3. dwie metody pobierające jeden element
+//... ale my chcemy odwołać sie do konkretnego
+//A. metoda
+document.querySelector("li:nth-child(3");
+
+//B. metoda
+
+const firstElement = document.getElementById('first')
+//tego nie musze pisac ale musiałbym cos napisać 
+const firstElement = document.querySelector("li:nth-child(3");
+
+//3. metody pobierające wszystkie pasując eelementy a nie tylko jeden
+//praca z jednym elementem jest łatwiejsza ponieważ ma pewne metody i właściwości
+//jak pobierzemy wiele elementów to są one najczęściej umieszczone w obiekcie tablicopodobnym, który musimy zmienić na tablicę
+//wtedy jednak będziemy musieli wykonbac albo pętlę albop jakąś metodę, aby do każdego elementu się dostać
+//wniosek inaczej pracuje kiedy mam jheden element porogramu a inaczej kiedy mam wiele elementów czyli tak jak poniżej:
+querySelector() //metoda do pobrania jednego elementu
+querySelectorAll() //służy do pobrasnia wielu elementów
+
+const list = document.querySelectorAll('li:ul');
+//pobieram weszystkie li które są dzieckiem ul
+//wrzucona zostanie noblist czyli lista węzłów, obiekt tablicopodobny który tez ma długość length i metody tablicy ale mniej niz tablica
