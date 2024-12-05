@@ -309,3 +309,35 @@ h2.classList.contains("title");
 // IV. ----------------TWORZENIE I DODAWANIE ELEMENTÓW ---------------
 //  Na początku muszę coś stworzyć aby potem zmodyfikować
 
+
+const firstli = document.querySelector('liFirstchild'); //pobieranie elementu
+//textcontent
+firstli.textContent = 'nierodka wita na js'; //modyfikacja elementu
+
+//możemy modyfikować zawartość elementów przez przpisyanie nowych właściwości za pomocą textcontent lub innerhtml
+
+//innerhtml
+//używamy by umieścić w html
+const firstli = document.querySelector('liFirstchild')
+firstli;
+innerHTML = <strong>Pogrubienie</strong>
+
+//1. STYLE
+//dodawanie do elementu liniowo
+//mamy wpływ na css
+//js nie pozwala jak css fontsize
+//zatem używamy notacji wielbłądziej (camel case)
+//czyli firstli.style.color
+const firstli = document.querySelector('liFirst child')
+firstli.style.fontsize ='20px';
+firstli.style.backgroundColor = 'pink';
+firstli.style.letterSpacing = '12px';
+
+//CLASS
+//1. dodawanie (add)
+//2.odejmownaie (remove)
+//3.przełączanie (toggle) klas
+firstli.classList.contains('space')
+//1. metoda toogle
+//jeśli dana klasa jest to ją zabierze, a jeśli nie ma to doda
+
